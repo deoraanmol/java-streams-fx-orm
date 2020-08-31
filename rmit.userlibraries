@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="Maven: junit:junit:4.13">
+    <archive path="/Users/sakshi/.m2/repository/junit/junit/4.13/junit-4.13.jar" />
+  </library>
+  <library name="Maven: org.apiguardian:apiguardian-api:1.1.0">
+    <archive path="/Users/sakshi/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar" />
+  </library>
+  <library name="Maven: org.hamcrest:hamcrest-core:1.3">
+    <archive path="/Users/sakshi/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar" />
+  </library>
+  <library name="Maven: org.junit.jupiter:junit-jupiter-api:5.6.2">
+    <archive path="/Users/sakshi/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.2/junit-jupiter-api-5.6.2.jar" />
+  </library>
+  <library name="Maven: org.junit.jupiter:junit-jupiter-engine:5.6.2">
+    <archive path="/Users/sakshi/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.6.2/junit-jupiter-engine-5.6.2.jar" />
+  </library>
+  <library name="Maven: org.junit.platform:junit-platform-commons:1.6.2">
+    <archive path="/Users/sakshi/.m2/repository/org/junit/platform/junit-platform-commons/1.6.2/junit-platform-commons-1.6.2.jar" />
+  </library>
+  <library name="Maven: org.junit.platform:junit-platform-engine:1.6.2">
+    <archive path="/Users/sakshi/.m2/repository/org/junit/platform/junit-platform-engine/1.6.2/junit-platform-engine-1.6.2.jar" />
+  </library>
+  <library name="Maven: org.junit.vintage:junit-vintage-engine:5.6.2">
+    <archive path="/Users/sakshi/.m2/repository/org/junit/vintage/junit-vintage-engine/5.6.2/junit-vintage-engine-5.6.2.jar" />
+  </library>
+  <library name="Maven: org.opentest4j:opentest4j:1.2.0">
+    <archive path="/Users/sakshi/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar" />
+  </library>
+  <library name="Python 2.7 interpreter library">
+    <archive path="/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7" />
+    <archive path="/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/plat-darwin" />
+    <archive path="/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/plat-mac" />
+    <archive path="/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/plat-mac/lib-scriptpackages" />
+    <archive path="/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-tk" />
+    <archive path="/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-dynload" />
+    <archive path="/Library/Python/2.7/site-packages" />
+    <archive path="/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python" />
+    <archive path="/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/PyObjC" />
+    <archive path="/Users/sakshi/Library/Caches/IntelliJIdea2019.3/python_stubs/-1247972723" />
+    <archive path="/Users/sakshi/Library/Application Support/JetBrains/IntelliJIdea2020.1/plugins/python/helpers/python-skeletons" />
+    <archive path="/Users/sakshi/Library/Application Support/JetBrains/IntelliJIdea2020.1/plugins/python/helpers/typeshed/stdlib/2" />
+    <archive path="/Users/sakshi/Library/Application Support/JetBrains/IntelliJIdea2020.1/plugins/python/helpers/typeshed/stdlib/2and3" />
+    <archive path="/Users/sakshi/Library/Application Support/JetBrains/IntelliJIdea2020.1/plugins/python/helpers/typeshed/third_party/2" />
+    <archive path="/Users/sakshi/Library/Application Support/JetBrains/IntelliJIdea2020.1/plugins/python/helpers/typeshed/third_party/2and3" />
+  </library>
+  <library name="Python 3.7 (dtl-python-sdk) interpreter library">
+    <archive path="/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.7/lib/python3.7" />
+    <archive path="/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.7/lib/python3.7/lib-dynload" />
+    <archive path="/Users/sakshi/local/src/datalogue/dtl-python-sdk/venv/lib/python3.7/site-packages" />
+    <archive path="/Users/sakshi/local/src/datalogue/dtl-python-sdk/venv/lib/python3.7/site-packages/setuptools-40.8.0-py3.7.egg" />
+    <archive path="/Users/sakshi/local/src/datalogue/dtl-python-sdk/venv/lib/python3.7/site-packages/pip-19.0.3-py3.7.egg" />
+    <archive path="/Users/sakshi/Library/Caches/IntelliJIdea2019.3/python_stubs/933404829" />
+    <archive path="/Users/sakshi/Library/Application Support/JetBrains/IntelliJIdea2020.1/plugins/python/helpers/python-skeletons" />
+    <archive path="/Users/sakshi/Library/Application Support/JetBrains/IntelliJIdea2020.1/plugins/python/helpers/typeshed/stdlib/3" />
+    <archive path="/Users/sakshi/Library/Application Support/JetBrains/IntelliJIdea2020.1/plugins/python/helpers/typeshed/stdlib/2and3" />
+    <archive path="/Users/sakshi/Library/Application Support/JetBrains/IntelliJIdea2020.1/plugins/python/helpers/typeshed/third_party/3" />
+    <archive path="/Users/sakshi/Library/Application Support/JetBrains/IntelliJIdea2020.1/plugins/python/helpers/typeshed/third_party/2and3" />
+  </library>
+  <library name="scala-sdk-2.13.1" />
+</eclipse-userlibraries>
+

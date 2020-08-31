@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SampleController">
+    <VBox>
+        <HBox>
+            <HBox spacing="10">
+                <padding>
+                    <Insets bottom="10" left="10" right="10" top="10" />
+                </padding>
+                <VBox id="teams" style="-fx-background-color: coral; -fx-text-fill: black">
+                    <Label>Team 1</Label>
+                    <HBox>
+                        <padding>
+                            <Insets left="10" right="10" top="10" />
+                        </padding>
+                        <TextField editable="false" style="-fx-background-color: white"></TextField>
+                        <CheckBox id="1|1" onAction="#updateSelection">
+                       <HBox.margin>
+                          <Insets left="10.0" top="4.0" />
+                       </HBox.margin></CheckBox>
+                    </HBox>
+<!--                    <HBox>-->
+<!--                        <padding>-->
+<!--                            <Insets left="10" right="10" top="10" />-->
+<!--                        </padding>-->
+<!--                        <TextField editable="false" style="-fx-background-color: white"></TextField>-->
+<!--                        <CheckBox id="1|2" onAction="#updateSelection">-->
+<!--                            <HBox.margin>-->
+<!--                                <Insets left="10.0" top="4.0" />-->
+<!--                            </HBox.margin></CheckBox>-->
+<!--                    </HBox>-->
+<!--                    <HBox>-->
+<!--                        <padding>-->
+<!--                            <Insets left="10" right="10" top="10" />-->
+<!--                        </padding>-->
+<!--                        <TextField editable="false" style="-fx-background-color: white"></TextField>-->
+<!--                        <CheckBox id="1|3" onAction="#updateSelection">-->
+<!--                            <HBox.margin>-->
+<!--                                <Insets left="10.0" top="4.0" />-->
+<!--                            </HBox.margin></CheckBox>-->
+<!--                    </HBox>-->
+<!--                    <HBox>-->
+<!--                        <padding>-->
+<!--                            <Insets left="10" right="10" top="10" />-->
+<!--                        </padding>-->
+<!--                        <TextField editable="false" style="-fx-background-color: white"></TextField>-->
+<!--                        <CheckBox id="1|4" onAction="#updateSelection">-->
+<!--                            <HBox.margin>-->
+<!--                                <Insets left="10.0" top="4.0" bottom="10"/>-->
+<!--                            </HBox.margin></CheckBox>-->
+<!--                    </HBox>-->
+                </VBox>
+            </HBox>
+        </HBox>
+        <HBox spacing="10">
+            <padding>
+                <Insets bottom="10" left="10" right="10" top="60" />
+            </padding>
+            <HBox>
+                <HBox>
+                    <padding>
+                        <Insets right="10" top="4" />
+                    </padding>
+                    <Label>Student ID</Label>
+                </HBox>
+                <TextField fx:id="studentInput" maxWidth="80.0" />
+            </HBox>
+            <Button onAction="#addMemberToTeam">Add</Button>
+            <Button onAction="#swapMembers">Swap</Button>
+        </HBox>
+    </VBox>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
