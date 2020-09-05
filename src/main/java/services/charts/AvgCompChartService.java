@@ -1,6 +1,9 @@
 package services.charts;
 
 import exceptions.EmptyListException;
+import hibernate.OrmTeams;
+import hibernate.dao.TeamsDao;
+import hibernate.services.OrmTeamsService;
 import javafx.collections.FXCollections;
 import javafx.scene.chart.BarChart;
 import javafx.scene.chart.CategoryAxis;
@@ -9,6 +12,7 @@ import javafx.scene.chart.XYChart;
 import services.ChartsService;
 import sources.DatafileIOclass;
 import sources.Teams;
+import utils.OrmStandardDeviationService;
 import utils.StandardDeviationService;
 
 import java.util.ArrayList;
@@ -16,9 +20,11 @@ import java.util.List;
 
 public class AvgCompChartService {
     private List<Teams> teamsList;
+    private List<OrmTeams> ormTeams;
 
-    public AvgCompChartService(List<Teams> teamsList) {
+    public AvgCompChartService(List<Teams> teamsList, List<OrmTeams> ormTeams) {
         this.teamsList = teamsList;
+        this.ormTeams = ormTeams;
     }
     public BarChart<String, Number> createChart(DatafileIOclass fileIO) {
         CategoryAxis xAxis = new CategoryAxis();
@@ -40,6 +46,37 @@ public class AvgCompChartService {
         barChart.getData().addAll(series1);
         barChart.setLegendVisible(false);
         return barChart;
+    }
+
+    public BarChart<String, Number> createChart(TeamsDao teamsDao) {
+        CategoryAxis xAxis = new CategoryAxis();
+        List<String> teamNames = new ArrayList<>();
+        for (Integer i=0; i < ormTeams.size(); i++) {
+            teamNames.add("Team"+ormTeams.get(i).getId());
+        }
+        xAxis.setCategories(FXCollections.observableArrayList(teamNames));
+        NumberAxis yAxis = new NumberAxis();
+        BarChart<String, Number> barChart = new BarChart<>(xAxis, yAxis);
+        barChart.setTitle("Avg Competency Levels\nStandard Deviation = "+getStdDeviation(teamsDao));
+        XYChart.Series<String, Number> series1 = new XYChart.Series<>();
+        for(Integer i=0; i < ormTeams.size(); i++) {
+            XYChart.Data<String, Number> bar = new XYChart.Data<>("Team" + (i + 1),
+                    OrmTeamsService.getAverageCompetencyForTeam(ormTeams.get(i), teamsDao));
+            series1.getData().add(bar);
+            ChartsService.setBarColors(i, bar);
+        }
+        barChart.getData().addAll(series1);
+        barChart.setLegendVisible(false);
+        return barChart;
+    }
+
+    private String getStdDeviation(TeamsDao teamsDao){
+        OrmStandardDeviationService service = new OrmStandardDeviationService(teamsDao);
+        try {
+            return service.getDeviationOfCompetency(ormTeams).toString();
+        } catch (EmptyListException e) {
+            return "Error: No teams found";
+        }
     }
 
     private String getStdDeviation(DatafileIOclass fileIO){

@@ -13,6 +13,7 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>${maven.compiler.source}</maven.compiler.target>
 		<junit.version>4.13</junit.version>
+		<hibernate.version>5.4.9.Final</hibernate.version>
 	</properties>
 
 	<dependencyManagement>
@@ -53,6 +54,18 @@
 			<groupId>org.openjfx</groupId>
 			<artifactId>javafx-controls</artifactId>
 			<version>14</version>
+		</dependency>
+		<!-- Hibernate -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+		<!-- MySQL -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.21</version>
 		</dependency>
 	</dependencies>
 

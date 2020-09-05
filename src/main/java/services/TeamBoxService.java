@@ -1,5 +1,8 @@
 package services;
 
+import hibernate.OrmTeams;
+import hibernate.dao.TeamsDao;
+import hibernate.services.OrmTeamsService;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
@@ -13,11 +16,14 @@ import utils.Colors;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class TeamBoxService {
     private HBox teamBoxContainer;
     private EventHandler<ActionEvent> checkboxAction;
     private FxCrudService fxCrudService;
+    TeamsDao teamsDao = new TeamsDao();
+    private List<OrmTeams> teamsFromDatabase;
 
     public TeamBoxService(HBox teamBoxContainer, EventHandler<ActionEvent> value, FxCrudService fxCrudService) {
         this.teamBoxContainer = teamBoxContainer;
@@ -28,18 +34,34 @@ public class TeamBoxService {
     public TeamBoxService() {}
 
 
-    public void createTeamBoxes(int size, boolean initFromTxtFile) {
+    public void createTeamBoxes(int size, boolean initFromDatabase) {
+        this.teamsFromDatabase = teamsDao.getAllTeams().stream().limit(size).collect(Collectors.toList());
         for (Integer i=1; i<=size; i++) {
             VBox teamBox = new VBox();
             teamBox.setStyle("-fx-background-color: "+ Colors.boxColors[i-1] + "; -fx-text-fill: black");
             VBox.setMargin(this.teamBoxContainer, new Insets(10, 10, 10, 10));
             Label teamName = new Label("Team "+i);
             teamBox.getChildren().add(teamName);
-            getTeamBoxFields(i.toString()).forEach(p -> teamBox.getChildren().add(p));
+            String teamNum = String.valueOf(this.teamsFromDatabase.get(i-1).getId());
+            getTeamBoxFields(teamNum).forEach(p -> teamBox.getChildren().add(p));
             teamBoxContainer.getChildren().addAll(teamBox);
         }
-        if (initFromTxtFile) {
-            this.populateMemberIds(size);
+        if (initFromDatabase) {
+            this.populateMemberIdsWithOrm(size, true);
+        }
+    }
+
+    public void populateMemberIdsWithOrm(int teamsToShowOnUI, boolean useCache) {
+        List<OrmTeams> allTeams = useCache ? this.teamsFromDatabase : teamsDao.getAllTeams().stream().limit(teamsToShowOnUI).collect(Collectors.toList());
+        this.teamsFromDatabase = allTeams;
+        for (int i=0; i<teamsToShowOnUI; i++) {
+            VBox teamBox = (VBox)teamBoxContainer.getChildren().get(i);
+            List<String> studentIds = OrmTeamsService.getAllStudentIdsFromTeam(allTeams.get(i));
+            for (Integer j=0; j<studentIds.size(); j++) {
+                HBox teamField = (HBox)teamBox.getChildren().get(j+1);
+                TextField textField = (TextField) teamField.getChildren().get(0);
+                textField.setText(studentIds.get(j));
+            }
         }
     }
 
@@ -70,7 +92,7 @@ public class TeamBoxService {
 
     private List<HBox> getTeamBoxFields(String teamNum) {
         List<HBox> fields = new ArrayList<>();
-        for (Integer i=1; i<5; i++) {
+        for (Integer i=1; i<=this.teamsFromDatabase.size(); i++) {
             HBox teamBox = new HBox();
             teamBox.setPadding(new Insets(10, 10, 10, 10));
             teamBox.getChildren().addAll(getTextField(), getCheckbox(teamNum, i.toString()));

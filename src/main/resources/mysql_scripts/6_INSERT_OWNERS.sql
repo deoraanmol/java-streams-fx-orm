@@ -1,0 +1,12 @@
+INSERT INTO owners(id,first_name,surname,role,email,company_id) VALUES ('OWN22','JACOB','HUGH','SOFTWARE','DDD.DEF@OUTLOOK.COM',1);
+INSERT INTO owners(id,first_name,surname,role,email,company_id) VALUES ('OWN2','JOHN','DOE','SOFTWARE','ABC.DEF@OUTLOOK.COM',2);
+INSERT INTO owners(id,first_name,surname,role,email,company_id) VALUES ('OWN3','JACKMAN','HU','SOFTWARE','GHI.JKL@OUTLOOK.COM',3);
+INSERT INTO owners(id,first_name,surname,role,email,company_id) VALUES ('OWN4','OWNER 4 NAME','HU','SOFTWARE','GHI4.JKL@OUTLOOK.COM',3);
+INSERT INTO owners(id,first_name,surname,role,email,company_id) VALUES ('OWN5','OWNER 5 NAME','HU','SOFTWARE','GHI5.JKL@OUTLOOK.COM',3);
+INSERT INTO owners(id,first_name,surname,role,email,company_id) VALUES ('OWN6','OWNER 6 NAME','HU','SOFTWARE','GHI6.JKL@OUTLOOK.COM',3);
+INSERT INTO owners(id,first_name,surname,role,email,company_id) VALUES ('OWN7','OWNER 7 NAME','HU','SOFTWARE','GHI7.JKL@OUTLOOK.COM',3);
+INSERT INTO owners(id,first_name,surname,role,email,company_id) VALUES ('OWN8','OWNER 8 NAME','HU','SOFTWARE','GHI8.JKL@OUTLOOK.COM',3);
+INSERT INTO owners(id,first_name,surname,role,email,company_id) VALUES ('OWN9','OWNER 9 NAME','HU','SOFTWARE','GHI9.JKL@OUTLOOK.COM',3);
+INSERT INTO owners(id,first_name,surname,role,email,company_id) VALUES ('OWN10','OWNER 10 NAME','HU','SOFTWARE','GHI10.JKL@OUTLOOK.COM',3);
+INSERT INTO owners(id,first_name,surname,role,email,company_id) VALUES ('OWN11','OWNER 11 NAME','HU','SOFTWARE','GHI11.JKL@OUTLOOK.COM',3);
+INSERT INTO owners(id,first_name,surname,role,email,company_id) VALUES ('OWN12','OWNER 12 NAME','HU','SOFTWARE','GHI12.JKL@OUTLOOK.COM',3);

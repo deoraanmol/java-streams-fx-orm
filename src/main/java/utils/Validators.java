@@ -5,11 +5,19 @@ import java.util.Map;
 import java.util.Set;
 
 public class Validators {
-    public static boolean isEmpty(String text) {
-        if (text != null && text.trim().length() > 0) {
-            return false;
+    public static final String EMPTY_STRING = "";
+    public static boolean isEmpty(Object value) {
+        if (value == null) {
+            return true;
+        } else  if (value.getClass() == String.class) {
+            String text = (String)value;
+            if (text != null && text.trim().length() > 0) {
+                return false;
+            } else {
+                return true;
+            }
         }
-        return true;
+        return false;
     }
 
     public static boolean isAnyStringEmpty(List<String> texts) {

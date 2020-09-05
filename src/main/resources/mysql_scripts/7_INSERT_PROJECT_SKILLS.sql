@@ -1,0 +1,12 @@
+INSERT INTO project_skills(P,N,A,W) VALUES (4,2,3,1);
+INSERT INTO project_skills(P,N,A,W) VALUES (3,4,2,1);
+INSERT INTO project_skills(P,N,A,W) VALUES (4,2,3,1);
+INSERT INTO project_skills(P,N,A,W) VALUES (3,4,2,1);
+INSERT INTO project_skills(P,N,A,W) VALUES (4,1,3,2);
+INSERT INTO project_skills(P,N,A,W) VALUES (3,4,2,1);
+INSERT INTO project_skills(P,N,A,W) VALUES (4,2,3,1);
+INSERT INTO project_skills(P,N,A,W) VALUES (3,4,2,1);
+INSERT INTO project_skills(P,N,A,W) VALUES (4,2,3,1);
+INSERT INTO project_skills(P,N,A,W) VALUES (3,4,2,1);
+INSERT INTO project_skills(P,N,A,W) VALUES (1,2,3,4);
+INSERT INTO project_skills(P,N,A,W) VALUES (4,2,3,1);

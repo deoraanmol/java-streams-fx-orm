@@ -22,13 +22,13 @@ public class ChartsService {
     public List<BarChart<String, Number>> drawCharts() {
         List<BarChart<String, Number>> charts = new ArrayList<>();
         // 1st chart
-        PrefPercentageChartService percentageChartService = new PrefPercentageChartService(teamsList);
+        PrefPercentageChartService percentageChartService = new PrefPercentageChartService(teamsList, null);
         charts.add(percentageChartService.createChart(fileIO));
         // 2nd chart
-        AvgCompChartService avgCompChartService = new AvgCompChartService(teamsList);
+        AvgCompChartService avgCompChartService = new AvgCompChartService(teamsList, null);
         charts.add(avgCompChartService.createChart(fileIO));
         // 3rd chart
-        SkillGapChartService skillGapChartService = new SkillGapChartService(teamsList);
+        SkillGapChartService skillGapChartService = new SkillGapChartService(teamsList, null);
         charts.add(skillGapChartService.createChart(fileIO));
         return charts;
     }

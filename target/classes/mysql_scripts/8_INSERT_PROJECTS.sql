@@ -1,0 +1,12 @@
+INSERT INTO projects(id,title,description,owner,skillset) VALUES ('PR1','RDM RESEARCH DATA MANAGMENT','pr1 desc','OWN22',1);
+INSERT INTO projects(id,title,description,owner,skillset) VALUES ('PR2','TECHIN TECHNOLOGY','some desc','OWN2',2);
+INSERT INTO projects(id,title,description,owner,skillset) VALUES ('PR3','RDM RESEARCH DATA MANAGMENT','some desc','OWN3',3);
+INSERT INTO projects(id,title,description,owner,skillset) VALUES ('PR4','TECHIN TECHNOLOGY','some desc','OWN4',4);
+INSERT INTO projects(id,title,description,owner,skillset) VALUES ('PR5','RDM RESEARCH DATA MANAGMENT','some desc','OWN5',5);
+INSERT INTO projects(id,title,description,owner,skillset) VALUES ('PR6','TECHIN TECHNOLOGY','some desc','OWN6',6);
+INSERT INTO projects(id,title,description,owner,skillset) VALUES ('PR7','RDM RESEARCH DATA MANAGMENT','some desc','OWN7',7);
+INSERT INTO projects(id,title,description,owner,skillset) VALUES ('PR8','TECHIN TECHNOLOGY','some desc','OWN8',8);
+INSERT INTO projects(id,title,description,owner,skillset) VALUES ('PR9','RDM RESEARCH DATA MANAGMENT','some desc','OWN9',9);
+INSERT INTO projects(id,title,description,owner,skillset) VALUES ('PR10','TECHIN TECHNOLOGY','some desc','OWN10',10);
+INSERT INTO projects(id,title,description,owner,skillset) VALUES ('PR11','PROJECT 11','some desc','OWN11',11);
+INSERT INTO projects(id,title,description,owner,skillset) VALUES ('PR12','RDM RESEARCH DATA MANAGMENT','some desc','OWN12',12);

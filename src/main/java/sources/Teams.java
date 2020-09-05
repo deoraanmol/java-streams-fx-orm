@@ -2,6 +2,7 @@ package sources;
 
 import exceptions.NoLeaderException;
 import exceptions.PersonalityImbalanceException;
+import interfaces.ITeams;
 import utils.FileNames;
 import utils.Personalities;
 import utils.Validators;
@@ -12,7 +13,7 @@ import java.math.BigDecimal;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class Teams implements Serializable {
+public class Teams implements Serializable, ITeams {
     private String projectId;
     private List<StudentInfo> students;
     public static DatafileIOclass textfileN1 = new DatafileIOclass();
@@ -122,7 +123,8 @@ public class Teams implements Serializable {
         }
     }
 
-    public static Double getAverageCompetency(Teams team, DatafileIOclass fileIO) {
+    public static Double getAverageCompetency(ITeams iTeam, DatafileIOclass fileIO) {
+        Teams team = (Teams)iTeam;
         List<StudentInfo> studentInfos = team.getStudentInfos();
         Double avgStudentGradesSum = new Double(0.0D);
 
@@ -144,7 +146,8 @@ public class Teams implements Serializable {
         return teamAvg;
     }
 
-    public static BigDecimal getPercentage(Teams team, DatafileIOclass fileIO) {
+    public static BigDecimal getPercentage(ITeams iTeam, DatafileIOclass fileIO) {
+        Teams team = (Teams)iTeam;
         List<StudentInfo> studentInfos = team.getStudentInfos();
         List<String> studentsMatchingPreference = new ArrayList();
         for (StudentInfo studentInfo: studentInfos) {
@@ -174,7 +177,8 @@ public class Teams implements Serializable {
         return percentageMatched;
     }
 
-    public static BigDecimal getSkillShortage(Teams team, DatafileIOclass fileIO) {
+    public static BigDecimal getSkillShortage(ITeams iTeam, DatafileIOclass fileIO) {
+        Teams team = (Teams)iTeam;
         List<StudentInfo> studentInfos = team.getStudentInfos();
         List<String> studentIds = studentInfos.stream().map(i -> i.getStudentId()).collect(Collectors.toList());
         if (Validators.hasAllStringsEmpty(studentIds)) {
