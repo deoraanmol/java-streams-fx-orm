@@ -17,7 +17,7 @@ import utils.Validators;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class SampleController {
+public class FxController {
 
     DatafileIOclass fileIO = new DatafileIOclass();
     FxCrudService fxCrudService = new FxCrudService();

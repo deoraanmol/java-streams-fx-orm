@@ -72,7 +72,7 @@
 				<artifactId>javafx-maven-plugin</artifactId>
 				<version>0.0.4</version>
 				<configuration>
-					<mainClass>HelloFX</mainClass>
+					<mainClass>StartFxApp</mainClass>
 				</configuration>
 			</plugin>
 		</plugins>

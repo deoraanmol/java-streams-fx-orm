@@ -24,6 +24,24 @@
   <library name="Maven: org.junit.vintage:junit-vintage-engine:5.6.2">
     <archive path="/Users/sakshi/.m2/repository/org/junit/vintage/junit-vintage-engine/5.6.2/junit-vintage-engine-5.6.2.jar" />
   </library>
+  <library name="Maven: org.openjfx:javafx-base:14">
+    <archive path="/Users/sakshi/.m2/repository/org/openjfx/javafx-base/14/javafx-base-14.jar" />
+  </library>
+  <library name="Maven: org.openjfx:javafx-base:mac:14">
+    <archive path="/Users/sakshi/.m2/repository/org/openjfx/javafx-base/14/javafx-base-14-mac.jar" />
+  </library>
+  <library name="Maven: org.openjfx:javafx-controls:14">
+    <archive path="/Users/sakshi/.m2/repository/org/openjfx/javafx-controls/14/javafx-controls-14.jar" />
+  </library>
+  <library name="Maven: org.openjfx:javafx-controls:mac:14">
+    <archive path="/Users/sakshi/.m2/repository/org/openjfx/javafx-controls/14/javafx-controls-14-mac.jar" />
+  </library>
+  <library name="Maven: org.openjfx:javafx-graphics:14">
+    <archive path="/Users/sakshi/.m2/repository/org/openjfx/javafx-graphics/14/javafx-graphics-14.jar" />
+  </library>
+  <library name="Maven: org.openjfx:javafx-graphics:mac:14">
+    <archive path="/Users/sakshi/.m2/repository/org/openjfx/javafx-graphics/14/javafx-graphics-14-mac.jar" />
+  </library>
   <library name="Maven: org.opentest4j:opentest4j:1.2.0">
     <archive path="/Users/sakshi/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar" />
   </library>
