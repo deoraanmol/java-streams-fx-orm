@@ -2,82 +2,43 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e39679d6-2d6a-4d64-a56e-94f83fe1ed51" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_11_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_3_0_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_fastinfoset_FastInfoset_1_2_15.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_persistence_javax_persistence_api_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_21.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_10_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_dom4j_dom4j_2_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_runtime_2_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_txw2_2_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_1_0_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_4_9_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_24_0_GA.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_1_1_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_2_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_2_spec_1_1_1_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jvnet_staxex_stax_ex_1_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controllers/OrmFxController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hibernate/HibernateUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hibernate/OrmPreference.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hibernate/OrmProjects.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hibernate/OrmStudentInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hibernate/OrmStudents.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hibernate/OrmTeams.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hibernate/OrmTechnicalSkills.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hibernate/dao/PreferenceDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hibernate/dao/StudentInfoDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hibernate/dao/StudentsDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hibernate/dao/TeamsDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hibernate/services/OrmTeamsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/interfaces/ITeams.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/OrmChartsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utils/OrmStandardDeviationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mysql_scripts/10_INSERT_TEAMS.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mysql_scripts/11_CONSOLIDATED_INSERTS.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mysql_scripts/1_CREATE_TABLES.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mysql_scripts/2_INSERT_TECH_SKILLS.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mysql_scripts/3_INSERT_STUDENTS.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mysql_scripts/4_INSERT_STUDENT_INFO.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mysql_scripts/5_INSERT_COMPANIES.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mysql_scripts/6_INSERT_OWNERS.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mysql_scripts/7_INSERT_PROJECT_SKILLS.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mysql_scripts/8_INSERT_PROJECTS.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mysql_scripts/9_INSERT_PREFERENCES.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/enums/SuggestionMode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hibernate/OrmSuggestedTeams.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hibernate/dao/SuggestedTeamsDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/services/SuggestionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/.classpath" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project Team Formation Mileston1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Project Team Formation Mileston1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project Team Formation Mileston1.eml" beforeDir="false" afterPath="$PROJECT_DIR$/Project Team Formation Mileston1.eml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/ChartsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/ChartsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rmit.userlibraries" beforeDir="false" afterPath="$PROJECT_DIR$/rmit.userlibraries" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/OrmFxController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/OrmFxController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/OrmTeams.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/OrmTeams.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/dao/PreferenceDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/dao/PreferenceDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/dao/TeamsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hibernate/dao/TeamsDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/OrmChartsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/OrmChartsService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/services/TeamBoxService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/TeamBoxService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/charts/AvgCompChartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/charts/AvgCompChartService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/charts/PrefPercentageChartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/charts/PrefPercentageChartService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/charts/SkillGapChartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/charts/SkillGapChartService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sources/DatafileIOclass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sources/DatafileIOclass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sources/Teams.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sources/Teams.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/utils/FxErrorMessages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/FxErrorMessages.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/Validators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/Validators.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/companies.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/companies.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/fx_samples/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fx_samples/sample.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/companies.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/companies.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controllers/FxController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/FxController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mysql_scripts/10_INSERT_TEAMS.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mysql_scripts/10_INSERT_TEAMS.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mysql_scripts/11_CONSOLIDATED_INSERTS.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mysql_scripts/11_CONSOLIDATED_INSERTS.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mysql_scripts/1_CREATE_TABLES.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mysql_scripts/1_CREATE_TABLES.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controllers/OrmFxController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controllers/OrmFxController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/fx_samples/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fx_samples/sample.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/services/ChartsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/services/ChartsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hibernate/OrmTeams.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate/OrmTeams.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hibernate/dao/PreferenceDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate/dao/PreferenceDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hibernate/dao/TeamsDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate/dao/TeamsDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mysql_scripts/10_INSERT_TEAMS.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mysql_scripts/10_INSERT_TEAMS.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mysql_scripts/11_CONSOLIDATED_INSERTS.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mysql_scripts/11_CONSOLIDATED_INSERTS.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mysql_scripts/1_CREATE_TABLES.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mysql_scripts/1_CREATE_TABLES.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/services/OrmChartsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/services/OrmChartsService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/services/TeamBoxService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/services/TeamBoxService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/services/charts/AvgCompChartService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/services/charts/AvgCompChartService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/services/charts/PrefPercentageChartService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/services/charts/PrefPercentageChartService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/services/charts/SkillGapChartService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/services/charts/SkillGapChartService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sources/DatafileIOclass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sources/DatafileIOclass.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/sources/Teams.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sources/Teams.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/utils/FxErrorMessages.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utils/FxErrorMessages.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/utils/StandardDeviationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utils/StandardDeviationService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/utils/Validators.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utils/Validators.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/sources/Milestone2Tests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/sources/Milestone2Tests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,9 +54,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -128,20 +89,23 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources/fx_samples" />
-      <recent name="$PROJECT_DIR$/src/test/resources" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="hibernate" />
-      <recent name="utils" />
-      <recent name="hibernate.dao" />
-      <recent name="services" />
-      <recent name="controllers" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/scripts/create_mysql" />
       <recent name="$PROJECT_DIR$/src/main/resources/fx_samples" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="hibernate" />
+      <recent name="hibernate.dao" />
+      <recent name="utils" />
+      <recent name="services" />
+      <recent name="controllers" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/fx_samples" />
+      <recent name="$PROJECT_DIR$/src/test/resources" />
     </key>
   </component>
   <component name="RunManager" selected="Application.StartFxApp">
@@ -215,8 +179,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.StartFxApp" />
-        <item itemvalue="Application.HelloFX" />
         <item itemvalue="Application.MilestoneMain" />
+        <item itemvalue="Application.HelloFX" />
         <item itemvalue="JUnit.TestSerializations" />
         <item itemvalue="JUnit.TestSerializations.testTeams" />
       </list>
@@ -243,7 +207,8 @@
       <workItem from="1598852788068" duration="3992000" />
       <workItem from="1598857229346" duration="222000" />
       <workItem from="1598966775484" duration="395000" />
-      <workItem from="1599284155265" duration="35859000" />
+      <workItem from="1599284155265" duration="36013000" />
+      <workItem from="1599370204366" duration="12063000" />
     </task>
     <servers />
   </component>
@@ -273,11 +238,15 @@
       <screen x="0" y="23" width="1440" height="797" />
     </state>
     <state x="533" y="129" key="#com.intellij.ide.util.MemberChooser/0.23.1440.797@0.23.1440.797" timestamp="1599319349529" />
-    <state x="506" y="236" key="#xdebugger.evaluate" timestamp="1599321897631">
+    <state x="490" y="293" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1599371054233">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state x="490" y="293" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.23.1440.797@0.23.1440.797" timestamp="1599371054233" />
+    <state x="581" y="248" key="#xdebugger.evaluate" timestamp="1599397821546">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
     <state x="2102" y="409" key="#xdebugger.evaluate/0.23.1440.797/1440.-77.1920.1057@1440.-77.1920.1057" timestamp="1598855458513" />
-    <state x="506" y="236" key="#xdebugger.evaluate/0.23.1440.797@0.23.1440.797" timestamp="1599321897631" />
+    <state x="581" y="248" key="#xdebugger.evaluate/0.23.1440.797@0.23.1440.797" timestamp="1599397821546" />
     <state x="297" y="23" key="CommitChangelistDialog2" timestamp="1599293809557">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
@@ -287,46 +256,46 @@
     </state>
     <state x="1690" y="23" width="1448" height="674" key="DiffContextDialog/0.23.1440.797/1440.-77.1920.1057@1440.-77.1920.1057" timestamp="1598427323117" />
     <state x="188" y="98" width="1086" height="509" key="DiffContextDialog/0.23.1440.797@0.23.1440.797" timestamp="1599311333622" />
-    <state width="1398" height="226" key="GridCell.Tab.0.bottom" timestamp="1599324875249">
+    <state width="1398" height="226" key="GridCell.Tab.0.bottom" timestamp="1599399419978">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
     <state width="1398" height="243" key="GridCell.Tab.0.bottom/0.23.1440.797/1440.-77.1920.1057@1440.-77.1920.1057" timestamp="1598857176394" />
-    <state width="1398" height="226" key="GridCell.Tab.0.bottom/0.23.1440.797@0.23.1440.797" timestamp="1599324875249" />
-    <state width="1398" height="226" key="GridCell.Tab.0.center" timestamp="1599324875248">
+    <state width="1398" height="226" key="GridCell.Tab.0.bottom/0.23.1440.797@0.23.1440.797" timestamp="1599399419978" />
+    <state width="1398" height="226" key="GridCell.Tab.0.center" timestamp="1599399419978">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
     <state width="1398" height="243" key="GridCell.Tab.0.center/0.23.1440.797/1440.-77.1920.1057@1440.-77.1920.1057" timestamp="1598857176393" />
-    <state width="1398" height="226" key="GridCell.Tab.0.center/0.23.1440.797@0.23.1440.797" timestamp="1599324875248" />
-    <state width="1398" height="226" key="GridCell.Tab.0.left" timestamp="1599324875248">
+    <state width="1398" height="226" key="GridCell.Tab.0.center/0.23.1440.797@0.23.1440.797" timestamp="1599399419978" />
+    <state width="1398" height="226" key="GridCell.Tab.0.left" timestamp="1599399419978">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
     <state width="1398" height="243" key="GridCell.Tab.0.left/0.23.1440.797/1440.-77.1920.1057@1440.-77.1920.1057" timestamp="1598857176392" />
-    <state width="1398" height="226" key="GridCell.Tab.0.left/0.23.1440.797@0.23.1440.797" timestamp="1599324875248" />
-    <state width="1398" height="226" key="GridCell.Tab.0.right" timestamp="1599324875249">
+    <state width="1398" height="226" key="GridCell.Tab.0.left/0.23.1440.797@0.23.1440.797" timestamp="1599399419978" />
+    <state width="1398" height="226" key="GridCell.Tab.0.right" timestamp="1599399419978">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
     <state width="1398" height="243" key="GridCell.Tab.0.right/0.23.1440.797/1440.-77.1920.1057@1440.-77.1920.1057" timestamp="1598857176394" />
-    <state width="1398" height="226" key="GridCell.Tab.0.right/0.23.1440.797@0.23.1440.797" timestamp="1599324875249" />
-    <state width="1398" height="226" key="GridCell.Tab.1.bottom" timestamp="1599324875083">
+    <state width="1398" height="226" key="GridCell.Tab.0.right/0.23.1440.797@0.23.1440.797" timestamp="1599399419978" />
+    <state width="1398" height="226" key="GridCell.Tab.1.bottom" timestamp="1599399419979">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
     <state width="1398" height="243" key="GridCell.Tab.1.bottom/0.23.1440.797/1440.-77.1920.1057@1440.-77.1920.1057" timestamp="1598857176396" />
-    <state width="1398" height="226" key="GridCell.Tab.1.bottom/0.23.1440.797@0.23.1440.797" timestamp="1599324875083" />
-    <state width="1398" height="226" key="GridCell.Tab.1.center" timestamp="1599324875083">
+    <state width="1398" height="226" key="GridCell.Tab.1.bottom/0.23.1440.797@0.23.1440.797" timestamp="1599399419979" />
+    <state width="1398" height="226" key="GridCell.Tab.1.center" timestamp="1599399419979">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
     <state width="1398" height="243" key="GridCell.Tab.1.center/0.23.1440.797/1440.-77.1920.1057@1440.-77.1920.1057" timestamp="1598857176395" />
-    <state width="1398" height="226" key="GridCell.Tab.1.center/0.23.1440.797@0.23.1440.797" timestamp="1599324875083" />
-    <state width="1398" height="226" key="GridCell.Tab.1.left" timestamp="1599324875083">
+    <state width="1398" height="226" key="GridCell.Tab.1.center/0.23.1440.797@0.23.1440.797" timestamp="1599399419979" />
+    <state width="1398" height="226" key="GridCell.Tab.1.left" timestamp="1599399419979">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
     <state width="1398" height="243" key="GridCell.Tab.1.left/0.23.1440.797/1440.-77.1920.1057@1440.-77.1920.1057" timestamp="1598857176395" />
-    <state width="1398" height="226" key="GridCell.Tab.1.left/0.23.1440.797@0.23.1440.797" timestamp="1599324875083" />
-    <state width="1398" height="226" key="GridCell.Tab.1.right" timestamp="1599324875083">
+    <state width="1398" height="226" key="GridCell.Tab.1.left/0.23.1440.797@0.23.1440.797" timestamp="1599399419979" />
+    <state width="1398" height="226" key="GridCell.Tab.1.right" timestamp="1599399419979">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
     <state width="1398" height="243" key="GridCell.Tab.1.right/0.23.1440.797/1440.-77.1920.1057@1440.-77.1920.1057" timestamp="1598857176395" />
-    <state width="1398" height="226" key="GridCell.Tab.1.right/0.23.1440.797@0.23.1440.797" timestamp="1599324875083" />
+    <state width="1398" height="226" key="GridCell.Tab.1.right/0.23.1440.797@0.23.1440.797" timestamp="1599399419979" />
     <state x="479" y="131" key="RollbackChangesDialog" timestamp="1599312789314">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
@@ -340,16 +309,16 @@
       <screen x="0" y="23" width="1440" height="797" />
     </state>
     <state x="100" y="123" width="1240" height="597" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1440.797@0.23.1440.797" timestamp="1598732533155" />
-    <state x="454" y="39" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1599323387471">
+    <state x="454" y="39" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1599378384376">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
     <state x="2045" y="-56" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1440.797/1440.-77.1920.1057@1440.-77.1920.1057" timestamp="1598432011149" />
-    <state x="454" y="39" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1440.797@0.23.1440.797" timestamp="1599323387471" />
-    <state x="535" y="176" width="598" height="548" key="find.popup" timestamp="1599324951738">
+    <state x="454" y="39" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1440.797@0.23.1440.797" timestamp="1599378384376" />
+    <state x="535" y="176" width="598" height="548" key="find.popup" timestamp="1599397103291">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
     <state x="2153" y="126" width="798" height="650" key="find.popup/0.23.1440.797/1440.-77.1920.1057@1440.-77.1920.1057" timestamp="1598857337494" />
-    <state x="535" y="176" width="598" height="548" key="find.popup/0.23.1440.797@0.23.1440.797" timestamp="1599324951738" />
+    <state x="535" y="176" width="598" height="548" key="find.popup/0.23.1440.797@0.23.1440.797" timestamp="1599397103291" />
     <state x="88" y="44" key="new project wizard" timestamp="1598704059350">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
@@ -359,10 +328,10 @@
     </state>
     <state x="2123" y="143" key="refactoring.ChangeSignatureDialog/0.23.1440.797/1440.-77.1920.1057@1440.-77.1920.1057" timestamp="1598430757077" />
     <state x="512" y="189" key="refactoring.ChangeSignatureDialog/0.23.1440.797@0.23.1440.797" timestamp="1598773788654" />
-    <state x="499" y="144" width="670" height="676" key="search.everywhere.popup" timestamp="1599325063014">
+    <state x="499" y="144" width="670" height="676" key="search.everywhere.popup" timestamp="1599399418078">
       <screen x="0" y="23" width="1440" height="797" />
     </state>
     <state x="2105" y="83" width="894" height="897" key="search.everywhere.popup/0.23.1440.797/1440.-77.1920.1057@1440.-77.1920.1057" timestamp="1598856868671" />
-    <state x="499" y="144" width="670" height="676" key="search.everywhere.popup/0.23.1440.797@0.23.1440.797" timestamp="1599325063014" />
+    <state x="499" y="144" width="670" height="676" key="search.everywhere.popup/0.23.1440.797@0.23.1440.797" timestamp="1599399418078" />
   </component>
 </project>

@@ -103,3 +103,21 @@ create table teams
     foreign key (student_id_4) references students(id)
 );
 -- TEAMS END --
+
+-- SUGGESTED_TEAMS --
+create table suggested_teams
+(
+    id int not null,
+    project_id varchar(5) unique not null,
+    student_id_1 varchar(5),
+    student_id_2 varchar(5),
+    student_id_3 varchar(5),
+    student_id_4 varchar(5),
+    foreign key (id) references teams(id),
+    foreign key (project_id) references projects(id),
+    foreign key (student_id_1) references students(id),
+    foreign key (student_id_2) references students(id),
+    foreign key (student_id_3) references students(id),
+    foreign key (student_id_4) references students(id)
+);
+-- SUGGESTED_TEAMS END --

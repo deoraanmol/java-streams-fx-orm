@@ -19,6 +19,7 @@
         <mapping class="hibernate.OrmPreference"/>
         <mapping class="hibernate.OrmTechnicalSkills"/>
         <mapping class="hibernate.OrmProjects"/>
+        <mapping class="hibernate.OrmSuggestedTeams"/>
 
     </session-factory>
 </hibernate-configuration>

@@ -1,5 +1,6 @@
 package controllers;
 
+import enums.SuggestionMode;
 import hibernate.OrmStudents;
 import hibernate.OrmTeams;
 import hibernate.dao.StudentsDao;
@@ -8,16 +9,10 @@ import hibernate.services.OrmTeamsService;
 import interfaces.ITeams;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.TextField;
-import javafx.scene.control.TextFormatter;
+import javafx.scene.control.*;
 import javafx.scene.layout.HBox;
 import models.TeamSelection;
-import services.ChartsService;
-import services.FxCrudService;
-import services.OrmChartsService;
-import services.TeamBoxService;
+import services.*;
 import sources.DatafileIOclass;
 import sources.Teams;
 import utils.FileNames;
@@ -41,11 +36,20 @@ public class OrmFxController {
     @FXML
     public TextField studentInput;
     @FXML
+    public Button addBtn;
+    @FXML
+    public Button swapBtn;
+    @FXML
+    public Button suggestionBtn;
+    @FXML
+    public Button undoSuggestionBtn;
+    @FXML
     Alert alert = new Alert(Alert.AlertType.ERROR);
     @FXML
     Alert success = new Alert(Alert.AlertType.INFORMATION);
     @FXML
     public Map<String, TeamSelection> selection = new HashMap<>();
+
     private TeamBoxService teamBoxesService;
     private OrmChartsService ormChartsService;
     StudentsDao studentsDao = new StudentsDao();
@@ -71,8 +75,8 @@ public class OrmFxController {
             } else {
                 // actual member addition to teams table in database
                 OrmTeamsService.addMemberToTeam(this.selection, student, teamsDao);
-                updateTextFields(FxErrorMessages.STUDENT_ADDED);
-                drawCharts();
+                updateTextFields(FxErrorMessages.STUDENT_ADDED, SuggestionMode.DISABLED);
+                drawCharts(SuggestionMode.DISABLED);
             }
         }
     }
@@ -88,13 +92,27 @@ public class OrmFxController {
             List<OrmTeams> ormTeams = teamsDao.getAllTeamsById(selectedTeamIds);
             if (ormStudents != null && ormStudents.size() == 2) {
                 teamsDao.swapMembersInTeams(this.selection, selectedStudentIds, ormTeams);
-                drawCharts();
-                updateTextFields(FxErrorMessages.STUDENTS_SWAPPED);
+                drawCharts(SuggestionMode.DISABLED);
+                updateTextFields(FxErrorMessages.STUDENTS_SWAPPED, SuggestionMode.DISABLED);
             } else {
                 alert.setContentText(FxErrorMessages.INVALID_STUDENTS_SELECTED);
                 alert.show();
             }
         }
+    }
+
+    public void suggestTeams(ActionEvent actionEvent) {
+        toggleButtons(SuggestionMode.ENABLED);
+        SuggestionService.suggestTeams(teamsDao, 5);
+        updateTextFields(FxErrorMessages.TEAMS_SUGGESTED, SuggestionMode.ENABLED);
+        drawCharts(SuggestionMode.ENABLED);
+    }
+
+    public void undoSuggestion(ActionEvent actionEvent) {
+        toggleButtons(SuggestionMode.DISABLED);
+        SuggestionService.suggestTeams(teamsDao, 5);
+        updateTextFields(FxErrorMessages.UNDO_SUGGESTION, SuggestionMode.DISABLED);
+        drawCharts(SuggestionMode.DISABLED);
     }
 
     public void updateSelection(ActionEvent actionEvent) {
@@ -116,7 +134,8 @@ public class OrmFxController {
             return change;
         }));
         createTeamBoxes();
-        drawCharts();
+        toggleButtons(SuggestionMode.DISABLED);
+        drawCharts(SuggestionMode.DISABLED);
     }
 
     private void createTeamBoxes() {
@@ -126,14 +145,28 @@ public class OrmFxController {
         teamBoxesService = teamBoxService;
     }
 
-    private void drawCharts() {
+    private void drawCharts(SuggestionMode suggestionMode) {
         ormChartsService = new OrmChartsService(teamsDao);
-        chartsContainer.getChildren().setAll(ormChartsService.drawCharts());
+        chartsContainer.getChildren().setAll(ormChartsService.drawCharts(suggestionMode));
     }
 
-    private void updateTextFields(String successMessage) {
-        teamBoxesService.populateMemberIdsWithOrm(5, false);
+    private void updateTextFields(String successMessage, SuggestionMode suggestionMode) {
+        teamBoxesService.populateMemberIdsWithOrm(5, false, suggestionMode);
         success.setContentText(successMessage);
         success.show();
+    }
+
+    private void toggleButtons(SuggestionMode suggestionMode) {
+        if (suggestionMode == SuggestionMode.ENABLED) {
+            this.addBtn.setDisable(true);
+            this.swapBtn.setDisable(true);
+            this.suggestionBtn.setDisable(true);
+            this.undoSuggestionBtn.setDisable(false);
+        } else {
+            this.addBtn.setDisable(false);
+            this.swapBtn.setDisable(false);
+            this.suggestionBtn.setDisable(false);
+            this.undoSuggestionBtn.setDisable(true);
+        }
     }
 }

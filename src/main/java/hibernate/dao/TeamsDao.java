@@ -1,9 +1,7 @@
 package hibernate.dao;
 
-import hibernate.HibernateUtil;
-import hibernate.OrmStudentInfo;
-import hibernate.OrmStudents;
-import hibernate.OrmTeams;
+import enums.SuggestionMode;
+import hibernate.*;
 import hibernate.services.OrmTeamsService;
 import models.TeamSelection;
 import org.hibernate.Session;
@@ -14,12 +12,17 @@ import java.util.stream.Collectors;
 
 public class TeamsDao {
 
-    public List<OrmTeams> getAllTeams() {
+    public List<OrmTeams> getAllTeams(SuggestionMode suggestionMode) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         try {
-            List<OrmTeams> teamsList = (List<OrmTeams>) session.createQuery(
-                    "FROM OrmTeams s ORDER BY s.id ASC").list();
-            return teamsList;
+            if(suggestionMode == SuggestionMode.DISABLED) {
+                List<OrmTeams> teamsList = (List<OrmTeams>) session.createQuery(
+                        "FROM OrmTeams s ORDER BY s.id ASC").list();
+                return teamsList;
+            } else {
+                List<OrmSuggestedTeams> suggestedTeams = session.createQuery("FROM OrmSuggestedTeams s ORDER BY s.id ASC").list();
+                return OrmTeams.fromSuggestedTeams(suggestedTeams);
+            }
         } finally {
             session.close();
         }

@@ -1,5 +1,6 @@
 package services;
 
+import enums.SuggestionMode;
 import hibernate.OrmTeams;
 import hibernate.dao.TeamsDao;
 import hibernate.services.OrmTeamsService;
@@ -24,18 +25,20 @@ public class TeamBoxService {
     private FxCrudService fxCrudService;
     TeamsDao teamsDao = new TeamsDao();
     private List<OrmTeams> teamsFromDatabase;
+    private Integer studentsPerTeam;
 
     public TeamBoxService(HBox teamBoxContainer, EventHandler<ActionEvent> value, FxCrudService fxCrudService) {
         this.teamBoxContainer = teamBoxContainer;
         this.checkboxAction = value;
         this.fxCrudService = fxCrudService;
+        this.studentsPerTeam = 4;
     }
 
     public TeamBoxService() {}
 
 
     public void createTeamBoxes(int size, boolean initFromDatabase) {
-        this.teamsFromDatabase = teamsDao.getAllTeams().stream().limit(size).collect(Collectors.toList());
+        this.teamsFromDatabase = teamsDao.getAllTeams(SuggestionMode.DISABLED).stream().limit(size).collect(Collectors.toList());
         for (Integer i=1; i<=size; i++) {
             VBox teamBox = new VBox();
             teamBox.setStyle("-fx-background-color: "+ Colors.boxColors[i-1] + "; -fx-text-fill: black");
@@ -47,12 +50,14 @@ public class TeamBoxService {
             teamBoxContainer.getChildren().addAll(teamBox);
         }
         if (initFromDatabase) {
-            this.populateMemberIdsWithOrm(size, true);
+            this.populateMemberIdsWithOrm(size, true, SuggestionMode.DISABLED);
         }
     }
 
-    public void populateMemberIdsWithOrm(int teamsToShowOnUI, boolean useCache) {
-        List<OrmTeams> allTeams = useCache ? this.teamsFromDatabase : teamsDao.getAllTeams().stream().limit(teamsToShowOnUI).collect(Collectors.toList());
+    public void populateMemberIdsWithOrm(int teamsToShowOnUI, boolean useCache, SuggestionMode suggestionMode) {
+        List<OrmTeams> allTeams = useCache
+                ? this.teamsFromDatabase
+                : teamsDao.getAllTeams(suggestionMode).stream().limit(teamsToShowOnUI).collect(Collectors.toList());
         this.teamsFromDatabase = allTeams;
         for (int i=0; i<teamsToShowOnUI; i++) {
             VBox teamBox = (VBox)teamBoxContainer.getChildren().get(i);
@@ -92,7 +97,7 @@ public class TeamBoxService {
 
     private List<HBox> getTeamBoxFields(String teamNum) {
         List<HBox> fields = new ArrayList<>();
-        for (Integer i=1; i<=this.teamsFromDatabase.size(); i++) {
+        for (Integer i=1; i<=this.studentsPerTeam; i++) {
             HBox teamBox = new HBox();
             teamBox.setPadding(new Insets(10, 10, 10, 10));
             teamBox.getChildren().addAll(getTextField(), getCheckbox(teamNum, i.toString()));

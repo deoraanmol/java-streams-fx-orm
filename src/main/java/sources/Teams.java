@@ -1,10 +1,12 @@
 package sources;
 
+import exceptions.EmptyListException;
 import exceptions.NoLeaderException;
 import exceptions.PersonalityImbalanceException;
 import interfaces.ITeams;
 import utils.FileNames;
 import utils.Personalities;
+import utils.StandardDeviationService;
 import utils.Validators;
 
 import java.io.File;
@@ -93,11 +95,11 @@ public class Teams implements Serializable, ITeams {
         return team;
     }
 
-    public static void displayTeamPreference(List<Teams> teams) {
+    public static void displayTeamPreference(List<Teams> teams){
         int i = 1;
         for (Teams team: teams) {
             System.out.println("---------%AGE OF PREFERENCES FOR TEAM: " + i + "---------------");
-            System.out.println("Percentage of Students in this Team who had this .Project in their first 2 preferences: " + getPercentage(team, textfileN1) + "%");
+            System.out.println("Percentage of Students in this Team who had this Project in their first 2 preferences: " + getPercentage(team, textfileN1) + "%");
             System.out.println("------------------------");
             i++;
         }

@@ -2,7 +2,6 @@ package hibernate.dao;
 
 import hibernate.HibernateUtil;
 import hibernate.OrmPreference;
-import hibernate.OrmStudentInfo;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
 import utils.Validators;
@@ -25,6 +24,17 @@ public class PreferenceDao {
                     return null;
                 }
             }
+        } finally {
+            session.close();
+        }
+    }
+
+    public List<OrmPreference> getPreferenceListFromStudentIds(List<String> studentIds) {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        try {
+            Query query = session.createQuery("FROM OrmPreference s where s.studentId in :studentIds");
+            query.setParameter("studentIds", studentIds);
+            return query.list();
         } finally {
             session.close();
         }

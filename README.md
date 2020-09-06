@@ -38,3 +38,8 @@ Database - MySQL (8.0.21)
 2. OSX - `MySQL is installed but is not starting.`
 
     Use MySQL Preference Pane (`https://dev.mysql.com/doc/mysql-osx-excerpt/5.7/en/osx-installation-prefpane.html`) to Start MySQL server.
+    
+3. MySQL commands:
+    Create Schema: `create schema milestone4;`
+    Drop Schema: `drop schema milestone4;`
+    Use Schema: `use milestone4;`    

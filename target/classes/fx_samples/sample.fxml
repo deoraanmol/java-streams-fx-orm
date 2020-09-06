@@ -28,8 +28,10 @@
                 </HBox>
                 <TextField fx:id="studentInput" maxWidth="80.0" />
             </HBox>
-            <Button onAction="#addMemberToTeam">Add</Button>
-            <Button onAction="#swapMembers">Swap</Button>
+            <Button onAction="#addMemberToTeam" fx:id="addBtn">Add</Button>
+            <Button onAction="#swapMembers" fx:id="swapBtn">Swap</Button>
+            <Button onAction="#suggestTeams" fx:id="suggestionBtn">Suggest</Button>
+            <Button onAction="#undoSuggestion" fx:id="undoSuggestionBtn">Undo Suggestion</Button>
         </HBox>
         <HBox spacing="10" fx:id="chartsContainer">
             <padding>
