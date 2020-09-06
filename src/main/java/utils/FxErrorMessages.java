@@ -10,4 +10,6 @@ public class FxErrorMessages {
     public static String INVALID_STUDENTS_SELECTED = "One of the selected studentIds do not exist in database";
     public static String STUDENT_ADDED = "Student was successfully added at the checked spot";
     public static String STUDENTS_SWAPPED = "Selected students were successfully swapped";
+    public static String TEAMS_SUGGESTED = "Suggested teams updated, click 'Undo' to show original teams";
+    public static String UNDO_SUGGESTION = "Showing original results, click 'Suggestion' to see balanced teams";
 }

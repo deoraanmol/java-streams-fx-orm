@@ -1,33 +1,32 @@
 package hibernate;
 
 import interfaces.ITeams;
-import utils.Validators;
 
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "teams")
-public class OrmTeams implements ITeams {
+@Table(name = "suggested_teams")
+public class OrmSuggestedTeams implements ITeams {
 
-    public static List<OrmTeams> fromSuggestedTeams(List<OrmSuggestedTeams> ormSuggestedTeamsList) {
-        List<OrmTeams> ormTeams = new ArrayList<>();
-        for(OrmSuggestedTeams ormSuggestedTeam: ormSuggestedTeamsList) {
-            OrmTeams ormTeam = new OrmTeams();
-            ormTeam.setId(ormSuggestedTeam.getId());
-            ormTeam.setProject(ormSuggestedTeam.getProject());
-            ormTeam.setStudent1(ormSuggestedTeam.getStudent1());
-            ormTeam.setStudent2(ormSuggestedTeam.getStudent2());
-            ormTeam.setStudent3(ormSuggestedTeam.getStudent3());
-            ormTeam.setStudent4(ormSuggestedTeam.getStudent4());
-            ormTeams.add(ormTeam);
+    public static List<OrmSuggestedTeams> fromOrmTeams(List<OrmTeams> ormTeamsList) {
+        List<OrmSuggestedTeams> suggestedTeams = new ArrayList<>();
+        for(OrmTeams ormTeam: ormTeamsList) {
+            OrmSuggestedTeams ormSuggestedTeam = new OrmSuggestedTeams();
+            ormSuggestedTeam.setId(ormTeam.getId());
+            ormSuggestedTeam.setProject(ormTeam.getProject());
+            ormSuggestedTeam.setStudent1(ormTeam.getStudent1());
+            ormSuggestedTeam.setStudent2(ormTeam.getStudent2());
+            ormSuggestedTeam.setStudent3(ormTeam.getStudent3());
+            ormSuggestedTeam.setStudent4(ormTeam.getStudent4());
+            suggestedTeams.add(ormSuggestedTeam);
         }
-        return ormTeams;
+        return suggestedTeams;
     }
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private int id;
 
     @OneToOne(targetEntity = OrmProjects.class)

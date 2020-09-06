@@ -146,7 +146,7 @@ public class DatafileIOclass {
         if (object != null) {
             return object;
         } else {
-            System.out.println("Object doesnt exist in file: " + filename);
+            //System.out.println("Object doesnt exist in file: " + filename);
             return null;
         }
     }
